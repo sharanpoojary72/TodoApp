@@ -1,6 +1,9 @@
 // frontend/features/auth/authSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
+const API_BASE_URL = import.meta.env.VITE_APP_BACKEND_URL || 'http://localhost:5000';
+const API_URL = `${API_BASE_URL}/api/todos`;
+
 // Helper to get token safely
 const getValidToken = () => {
     const token = localStorage.getItem('token');
@@ -21,7 +24,7 @@ const getValidUser = () => {
 
 export const registerUser = createAsyncThunk('auth/register', async (userData, thunkAPI) => {
     try {
-        const response = await fetch('https://todoapp-cmxp.onrender.com/api/auth/register', {
+        const response = await fetch(`${API_URL}/api/auth/register`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(userData)
@@ -36,7 +39,7 @@ export const registerUser = createAsyncThunk('auth/register', async (userData, t
 
 export const loginUser = createAsyncThunk('auth/login', async (credentials, thunkAPI) => {
     try {
-        const response = await fetch('https://todoapp-cmxp.onrender.com/api/auth/login', {
+        const response = await fetch(`${API_URL}/api/auth/login`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(credentials)

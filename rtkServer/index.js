@@ -12,11 +12,7 @@ const app = express();
 
 connectDB();
 
-app.use(cors({
-    // Replace the second string with your actual Vercel deployment URL
-    origin: ['http://localhost:5173', 'todo-app-ruddy-seven-34.vercel.app'],
-    credentials: true
-}));
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
