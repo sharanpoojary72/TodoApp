@@ -1,0 +1,23 @@
+.add-todo{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.add-todo input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+    width: 300px;
+}
+
+.add-todo button{
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
