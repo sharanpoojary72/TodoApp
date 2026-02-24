@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice, } from "@reduxjs/toolkit";
 // import initialTodos from '../../app/todosData.json'
 
-const API_URL = 'http://localhost:5000/api/todos';
+const API_URL = 'https://todoapp-cmxp.onrender.com/api/todos';
 
 const initialState = {
     todos: [],
