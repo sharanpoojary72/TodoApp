@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         {/* PUBLIC ROUTES */}
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
         {/* PROTECTED ROUTES (Requires Login) */}
