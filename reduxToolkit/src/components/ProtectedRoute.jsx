@@ -8,7 +8,7 @@ const ProtectedRoute = () => {
     // Rigorous Check: Token must exist AND not be the literal string "undefined"
     const isActuallyLoggedIn = token && token !== 'undefined' && token !== 'null';
 
-    return isActuallyLoggedIn ? <Outlet /> : <Navigate to="/login" replace />;
+    return isActuallyLoggedIn ? <Outlet /> : <Navigate to="/" replace />;
 };
 
 export default ProtectedRoute;
